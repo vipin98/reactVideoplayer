@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import classes from './VideoCard.module.css';
+import { Link } from 'react-router-dom'
+import classes from './VideoCard.module.css'
 
 const VideoCard = (props) => {
 
     return(
-        <Link className={classes.VideoCard} to={"#"}>
+        <Link className={classes.VideoCard}  to={`/video/watch/${props.id}`}>
             <div>
                 <img className={classes.Thumbnail} src={props.thumbnail} alt="Video Thumbnail" />
                 <h3 className={classes.Title}>{props.title}</h3>
